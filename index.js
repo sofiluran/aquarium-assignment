@@ -17,11 +17,10 @@ app.use("/octopi", octopiRouter)
 
 app.get('/', (req, res) => {
   let sideBarData = groups.map(e => e.name)
-  res.render(path.join(__dirname, 'pages/index.ejs'), {
+  res.render(path.join('pages/index'), {
     pageTitle: "Home",
-    sideBar: sideBarData,
-    
+    sideBar: sideBarData
   })
 })
 
-app.listen(PORT, ()=> console.log(`Listening on port ${PORT}`))
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
