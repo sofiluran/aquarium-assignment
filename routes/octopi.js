@@ -5,37 +5,39 @@ import { octopi } from '../data/creatures.js'
 const octopiRouter = express.Router()
 const categoryName = "Octopi"
 
+//Returns an array with all the species in a category//
 const getSidebarContent = () => {
   let sideBarData = octopi.map(e => e.name)
   return sideBarData
 }
 
-const findCreature = (creatureName) => {
-  let formattedName = creatureName.replace(/-/g, ' ')
-  let creatureObject = octopi.find(e => e.name.toLowerCase() === formattedName)
-  return creatureObject
+//Returns an object with the species data//
+const findSpecies = (speciesName) => {
+  let formattedName = speciesName.replace(/-/g, ' ')
+  let speciesObject = octopi.find(e => e.name.toLowerCase() === formattedName)
+  return speciesObject
+}
+
+//Returns an object with the species group info//
+const findCategory = () => {
+  let currentCategory = groups.find(e => e.name === categoryName)
+  return currentCategory
 }
 
 octopiRouter.get('/', (req, res) => {
-  let creatureDescription = groups.find(e => e.name === categoryName)
   res.render('pages/index', {
-    pageTitle: categoryName,
-    sideBar: getSidebarContent(),
-    description: creatureDescription.description
+    category: findCategory(),
+    sideBar: getSidebarContent()
   })
 })
 
 octopiRouter.get('/species', (req, res) => {
-  if(!req.query.name) res.redirect(`/${categoryName.toLowerCase()}`)
-  const creature = findCreature(req.query.name.toLowerCase())
+  if(!req.query.name) return res.redirect(`/${categoryName.toLowerCase()}`)
+  const creature = findSpecies(req.query.name.toLowerCase())
   res.render('pages/index', {
-    pageTitle: creature.name,
+    category: categoryName,
     sideBar: getSidebarContent(),
-    description: creature.description,
-    habitat: creature.habitat,
-    diet: creature.diet,
-    lifespan: creature.lifespan,
-    size: creature.size
+    species: creature
   })
 })
 
