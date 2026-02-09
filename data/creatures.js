@@ -52,8 +52,107 @@ export const octopi = [
   }
 ]
 
-export const crustaceans = []
+export const crustaceans = [
+  {
+    name: "Soldier Crab",
+    habitat: ["Intertidal Mudflats", "Sandy Shores", "Mangrove Edges"],
+    diet: "Algae, Detritus, Microscopic Organic Matter.",
+    lifespan: "Up to 3 years.",
+    size: "2-4cm",
+    description: "The Soldier Crab is a small but captivating crustacean commonly found along Australia’s tropical and subtropical coastlines. Famous for their mass migrations, these crabs move in large, coordinated groups across mudflats as the tide recedes. Their pale, rounded bodies and long eye stalks give them a distinctive appearance. Soldier Crabs feed by sifting sand for organic material, playing an important role in recycling nutrients within coastal ecosystems. In our exhibit, visitors can observe their synchronized movements and social behavior up close. Despite their size, they are one of the most memorable sights in Australia’s intertidal zones."
+  },
+  {
+    name: "Balmain Bug",
+    habitat: ["Rocky Reefs", "Continental Shelf", "Coastal Waters"],
+    diet: "Mollusks, Small Crustaceans, Marine Invertebrates.",
+    lifespan: "Up to 10 years.",
+    size: "20-25cm",
+    description: "The Balmain Bug, also known as the Eastern Rock Lobster Slipper Lobster, is a uniquely Australian crustacean found along the country’s eastern coastline. Unlike true lobsters, it has a flattened body and wide, shovel-like antennae that help it navigate rocky reefs. It is a nocturnal species, spending daylight hours hidden in crevices before emerging to feed. Balmain Bugs are slow-growing and long-lived, making them vulnerable to overfishing. Our exhibit highlights their unusual anatomy and secretive lifestyle. Visitors gain a rare look at one of Australia’s most distinctive reef-dwelling crustaceans."
+  },
+  {
+    name: "Tasmanian Giant Freshwater Crayfish",
+    habitat: ["Freshwater Rivers", "Streams", "Forest Catchments"],
+    diet: "Decaying Plant Matter, Insects, Small Aquatic Animals.",
+    lifespan: "Up to 60 years.",
+    size: "Up to 90cm",
+    description: "The Tasmanian Giant Freshwater Crayfish is the largest freshwater invertebrate in the world and one of Australia’s most extraordinary endemic species. Found only in Tasmania’s clean, slow-moving rivers, it can live for several decades. These crayfish grow slowly, taking many years to reach full size. They play a vital role in freshwater ecosystems by breaking down organic material. Due to habitat loss and their slow reproduction, they are considered vulnerable. Our exhibit showcases this gentle giant and highlights the importance of freshwater conservation."
+  },
+  {
+    name: "Eastern King Prawn",
+    habitat: ["Sandy Seafloors", "Estuaries", "Coastal Waters"],
+    diet: "Small Invertebrates, Algae, Organic Detritus.",
+    lifespan: "2-3 years.",
+    size: "Up to 35cm",
+    description: "The Eastern King Prawn is one of Australia’s most iconic and commercially important crustaceans. Found in warm coastal waters and estuaries, it spends much of its life buried in sand to avoid predators. At night, it becomes active, feeding and moving across the seafloor. Its streamlined body and powerful tail allow for quick escapes when threatened. In our aquarium, visitors can observe the natural behavior of this otherwise elusive species. The exhibit highlights both its ecological role and its importance to Australian fisheries."
+  }
+]
 
-export const seahorses = []
+export const seahorses = [
+  {
+    name: "Leafy Sea Dragon",
+    habitat: ["Kelp Forests", "Seagrass Meadows", "Rocky Reefs"],
+    diet: "Mysid Shrimp, Small Crustaceans.",
+    lifespan: "5-10 years.",
+    size: "Up to 35cm",
+    description: "The Leafy Sea Dragon is one of Australia’s most iconic and visually stunning marine animals. Endemic to southern Australian waters, it is famous for its leaf-like appendages that provide exceptional camouflage among kelp and seagrass. Despite their elaborate appearance, these appendages are not used for swimming but purely for disguise. Leafy Sea Dragons move slowly, relying on stealth rather than speed to avoid predators. Like seahorses, males carry and brood the eggs until they hatch. Our exhibit offers a rare opportunity to observe this living work of art up close."
+  },
+  {
+    name: "White's Seahorse",
+    habitat: ["Seagrass Beds", "Coral and Sponge Reefs", "Piers and Jetties"],
+    diet: "Small Crustaceans, Zooplankton.",
+    lifespan: "5-6 years.",
+    size: "Up to 16cm",
+    description: "White’s Seahorse is a native Australian species commonly found in sheltered coastal waters. It uses its prehensile tail to anchor itself to seagrass, sponges, or man-made structures such as pylons. This seahorse is known for forming monogamous pairs and performing daily greeting rituals. Its color can vary to match its surroundings, offering effective camouflage. White’s Seahorse populations have declined due to habitat loss, making conservation efforts especially important. Our exhibit highlights both its delicate beauty and the need to protect coastal habitats."
+  },
+  {
+    name: "Zebra Seahorse",
+    habitat: ["Coral Reefs", "Rocky Reefs", "Coastal Waters"],
+    diet: "Copepods, Small Crustaceans.",
+    lifespan: "1-3 years.",
+    size: "Up to 8cm",
+    description: "The Zebra Seahorse is a small but striking species named for its bold black-and-white banded pattern. Native to Australian waters, it relies on camouflage and stillness to ambush tiny prey drifting past. Unlike many seahorses, it often inhabits more exposed reef environments. Its distinctive markings help break up its outline among coral and rock. Zebra Seahorses are rarely seen in the wild due to their size and excellent camouflage. Visitors to our exhibit can appreciate the intricate patterns that make this species so unique."
+  },
+  {
+    name: "Pygmy Seahorse",
+    habitat: ["Gorgonian Corals", "Deep Reef Slopes"],
+    diet: "Tiny Copepods, Microcrustaceans.",
+    lifespan: "1-2 years.",
+    size: "1.5-2.5cm",
+    description: "The Pygmy Seahorse is one of the smallest and most elusive seahorse species in the world. Perfectly adapted to life among gorgonian corals, it matches the color and texture of its host with astonishing precision. This camouflage is so effective that the species went unnoticed until discovered by chance. Pygmy Seahorses spend their entire lives on a single coral, rarely moving far. Their tiny size and secretive nature make them extremely difficult to spot. Our exhibit provides a rare and intimate glimpse into the hidden micro-world of reef life."
+  }
+]
 
-export const fish = []
+export const reefDwellers = [
+  {
+    name: "Handfish",
+    habitat: ["Sandy Reef Flats", "Seagrass Beds", "Soft Sediment Seafloor"],
+    diet: "Small Crustaceans, Marine Worms.",
+    lifespan: "Estimated 5–10 years.",
+    size: "10–15cm",
+    description: "The Handfish is one of Australia’s most unusual and rare reef dwellers, famous for using its modified fins to ‘walk’ across the seafloor rather than swim. Found primarily in southern Australian waters, it moves slowly and deliberately over sand and seagrass. This behavior makes it highly distinctive but also vulnerable to environmental change. Handfish rely on camouflage and stillness to ambush small prey. Several species are critically endangered due to habitat loss and limited mobility. Our exhibit highlights this extraordinary fish and the importance of protecting Australia’s most fragile marine species."
+  },
+  {
+    name: "Wobbegong Shark",
+    habitat: ["Coral Reefs", "Rocky Reefs", "Continental Shelf"],
+    diet: "Fish, Octopus, Crustaceans.",
+    lifespan: "Up to 30 years.",
+    size: "Up to 3m",
+    description: "The Wobbegong Shark is a distinctive bottom-dwelling shark commonly found on Australian reefs. Its flattened body and tasselled skin flaps provide excellent camouflage among coral and rock. Wobbegongs spend much of their time resting on the seafloor, blending seamlessly into their surroundings. They are ambush predators, striking quickly when prey comes within reach. Despite their fearsome appearance, they are generally calm unless provoked. Our exhibit allows visitors to observe this master of camouflage up close in a reef environment."
+  },
+  {
+    name: "Rainbow Parrotfish",
+    habitat: ["Coral Reefs", "Lagoon Reefs", "Shallow Tropical Waters"],
+    diet: "Algae, Coral Polyps.",
+    lifespan: "Up to 20 years.",
+    size: "Up to 1.2m",
+    description: "The Rainbow Parrotfish is one of the most colorful inhabitants of Australia’s tropical reefs. Equipped with a beak-like mouth, it scrapes algae and coral from reef surfaces as it feeds. This feeding behavior plays a vital role in maintaining reef health by preventing algae overgrowth. Parrotfish are known for dramatic color changes throughout their lives and between sexes. At night, some species produce a mucus cocoon for protection while sleeping. Our exhibit showcases the movement, color, and ecological importance of these reef architects."
+  },
+  {
+    name: "Pineapple Fish",
+    habitat: ["Caves", "Rock Crevices", "Deep Reef Slopes"],
+    diet: "Small Crustaceans, Zooplankton.",
+    lifespan: "Up to 10 years.",
+    size: "20–25cm",
+    description: "The Pineapple Fish is a nocturnal reef species easily recognized by its armored, scale-like body and glowing underbelly. Found in deeper or sheltered reef environments, it hides in caves during the day and emerges at night to feed. The glow comes from bioluminescent bacteria housed in specialized light organs beneath its eyes. This light may help with communication or hunting in low-light conditions. Pineapple Fish move slowly and deliberately, relying on armor rather than speed for protection. Our exhibit reveals one of the reef’s most unusual nighttime inhabitants."
+  }
+]
