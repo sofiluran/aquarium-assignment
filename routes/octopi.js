@@ -1,40 +1,30 @@
 import express from "express"
 import { groups } from '../data/creatures.js'
 import { octopi } from '../data/creatures.js'
+import { getSidebarContent, findCategory } from "../index.js"
 
 const octopiRouter = express.Router()
-const categoryName = "Octopi"
+const categoryName = 'Octopi'
 
-const getSidebarContent = () => {
-  let sideBarData = octopi.map(e => e.name)
-  return sideBarData
-}
-
-const findSpecies = (speciesName) => {
+const findSpecies = (speciesName, db) => {
   let formattedName = speciesName.replace(/-/g, ' ')
-  let speciesObject = octopi.find(e => e.name.toLowerCase() === formattedName)
+  let speciesObject = db.find(e => e.name.toLowerCase() === formattedName)
   return speciesObject
 }
-
-const findCategory = () => {
-  let currentCategory = groups.find(e => e.name === categoryName)
-  return currentCategory
-}
-
 
 octopiRouter.get('/', (req, res) => {
   res.render('pages/index', {
     category: findCategory(),
-    sideBar: getSidebarContent()
+    sideBar: getSidebarContent(octopi)
   })
 })
 
 octopiRouter.get('/species', (req, res) => {
   if(!req.query.name) return res.redirect(`/${categoryName.toLowerCase()}`)
-  const creature = findSpecies(req.query.name.toLowerCase())
+  const creature = findSpecies(req.query.name.toLowerCase(), octopi)
   res.render('pages/index', {
     category: categoryName,
-    sideBar: getSidebarContent(),
+    sideBar: getSidebarContent(octopi),
     species: creature
   })
 })

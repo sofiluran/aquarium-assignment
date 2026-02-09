@@ -5,7 +5,6 @@ import { groups } from './data/creatures.js'
 
 const app = express()
 const PORT = 3456
-const __dirname = path.resolve()
 
 app.set('view engine', 'ejs')
 app.use(express.static("public"))
@@ -15,11 +14,24 @@ app.use("/octopi", octopiRouter)
 // app.use("/reef-dwellers", reefDwellersRouter)
 // app.use("/seahorses", seahorsesRouter)
 
+
+//Helper Functions//
+const categoryName = "Home"
+
+export const getSidebarContent = (db) => {
+  let sideBarData = db.map(e => e.name)
+  return sideBarData
+}
+
+export const findCategory = (db = groups) => {
+  let currentCategory = db.find(e => e.name === categoryName)
+  return currentCategory
+}
+
 app.get('/', (req, res) => {
-  let sideBarData = groups.map(e => e.name)
   res.render(path.join('pages/index'), {
-    pageTitle: "Home",
-    sideBar: sideBarData
+    category: findCategory(),
+    sideBar: getSidebarContent(groups)
   })
 })
 

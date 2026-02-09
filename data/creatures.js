@@ -1,5 +1,9 @@
 export const groups = [
   {
+    name: "Home",
+    description: "Welcome to Our Aquarium, where the wonders of Australia's deep blue are brought right to your fingertips! Whether you're here to marvel at the eight-armed geniuses of the reef or the armored architects of the seafloor, there is something enchanting waiting around every corner. Take a slow, deliberate stroll past our delicate seahorses, or try to spot a master of disguise hiding in plain sight among our clever crustaceans. We've carefully designed every habitat to feel just like home for our finned and many-legged friends, from the sun-drenched shallows to the mysterious deep. You might find yourself in a staring contest with a Southern Sand Octopus or watching the vibrant parade of our colorful reef dwellers. Our mission is to share the magic of these exotic marine treasures while highlighting the importance of protecting their fragile underwater worlds. Dive into the adventure today and discover the incredible stories living beneath the surface!"
+  },
+  {
     name: "Octopi",
     description: "Australia is home to some of the most intelligent and visually striking octopus species on the planet, and our aquarium brings these remarkable animals into clear view. Our octopus exhibits showcase rare and elusive species found along Australia's coastlines, reefs, and deeper waters. Visitors can observe their problem-solving abilities, dynamic camouflage, and unique hunting behaviors up close. From beautifully cryptic sand dwellers to species with powerful defenses, each display highlights the adaptability of these cephalopods. Carefully designed habitats replicate their natural environments to encourage natural behavior. Together, these exhibits represent some of the finest and most fascinating octopi Australia has to offer."
   },
