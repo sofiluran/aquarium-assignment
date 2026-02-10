@@ -1,6 +1,7 @@
 import express from "express"
+import { groups } from '../data/creatures.js'
 import { seahorses } from '../data/creatures.js'
-import { getSidebarContent, findCategory } from "../index.js"
+import { getSidebarContent, findCategory, findNavContent } from "../index.js"
 
 const seahorseRouter = express.Router()
 const categoryName = 'Seahorses'
@@ -14,7 +15,7 @@ const findSpecies = (speciesName, db) => {
 seahorseRouter.get('/', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
-    category: findCategory(),
+    category: findCategory(groups, categoryName),
     sideBar: getSidebarContent(seahorses)
   })
 })
