@@ -13,6 +13,7 @@ const findSpecies = (speciesName, db) => {
 
 seahorseRouter.get('/', (req, res) => {
   res.render('pages/index', {
+    navMenu: findNavContent(),
     category: findCategory(),
     sideBar: getSidebarContent(seahorses)
   })
@@ -22,6 +23,7 @@ seahorseRouter.get('/species', (req, res) => {
   if(!req.query.name) return res.redirect(`/${categoryName.toLowerCase()}`)
   const creature = findSpecies(req.query.name.toLowerCase(), seahorses)
   res.render('pages/index', {
+    navMenu: findNavContent(),
     category: categoryName,
     sideBar: getSidebarContent(seahorses),
     species: creature
