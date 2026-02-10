@@ -10,6 +10,11 @@ html, body {
   width: 100%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   height: 90px;
 }
@@ -57,5 +62,58 @@ html, body {
 .logo {
   height: auto;
   width: 100%;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+}
+
+.sidebar {
+  border-radius: 15px;
+  display: flex;
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+}
+
+.sidebar-video {
+  height: 100%;
+  position: absolute;
+  object-fit: contain;
+
+}
+
+.sidebar-list {
+  border-radius: 15px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 7%;
+  z-index: 1;
+}
+
+.sidebar-header {
+  color: white;
+  display: block;
+  font-size: 1.6rem;
+  padding: 14px 0;
+  text-decoration: none;
+}
+
+.sidebar-item {
+  color: white;
+  font-size: 1.4rem;
+  padding: 8px 0;
+  text-decoration: none;
 }
 

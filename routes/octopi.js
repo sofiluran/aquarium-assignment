@@ -16,7 +16,7 @@ octopiRouter.get('/', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
     category: findCategory(groups, categoryName),
-    sideBar: getSidebarContent(octopi)
+    sideBar: getSidebarContent(octopi, categoryName)
   })
 })
 
@@ -26,7 +26,7 @@ octopiRouter.get('/species', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
     category: categoryName,
-    sideBar: getSidebarContent(octopi),
+    sideBar: getSidebarContent(octopi, categoryName),
     species: creature
   })
 })

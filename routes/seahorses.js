@@ -16,7 +16,7 @@ seahorseRouter.get('/', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
     category: findCategory(groups, categoryName),
-    sideBar: getSidebarContent(seahorses)
+    sideBar: getSidebarContent(seahorses, categoryName)
   })
 })
 
@@ -26,7 +26,7 @@ seahorseRouter.get('/species', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
     category: categoryName,
-    sideBar: getSidebarContent(seahorses),
+    sideBar: getSidebarContent(seahorses, categoryName),
     species: creature
   })
 })

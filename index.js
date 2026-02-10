@@ -18,9 +18,14 @@ app.use("/seahorses", seahorseRouter)
 //Helper Functions//
 const categoryName = "Home"
 
-export const getSidebarContent = (db) => {
-  let sideBarData = db.map(e => e.name)
-  return sideBarData
+export const getSidebarContent = (db, category) => {
+  let categoryGroups = db.map(e => e.name)
+  let sideBarTitle = category
+  let sidebarData = {
+    title: sideBarTitle,
+    data: categoryGroups
+  }
+  return sidebarData
 }
 
 export const findCategory = (db = groups, category) => {
@@ -37,7 +42,7 @@ app.get('/', (req, res) => {
   res.render(path.join('pages/index'), {
     navMenu: findNavContent(),
     category: findCategory(groups, categoryName),
-    sideBar: getSidebarContent(groups)
+    sideBar: getSidebarContent(groups, categoryName)
   })
 })
 
