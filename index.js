@@ -1,6 +1,7 @@
 import express from "express"
 import * as path from 'path'
 import octopiRouter from "./routes/octopi.js"
+import seahorseRouter from "./routes/seahorses.js"
 import { groups } from './data/creatures.js'
 
 const app = express()
@@ -10,7 +11,9 @@ app.set('view engine', 'ejs')
 app.use(express.static("public"))
 
 app.use("/octopi", octopiRouter)
-
+app.use("/seahorses", seahorseRouter)
+// app.use("/crustaceans", crustaceansRouter)
+// app.use("/reef-dwellers", reefDwellersRouter)
 
 //Helper Functions//
 const categoryName = "Home"
