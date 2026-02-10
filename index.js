@@ -15,8 +15,6 @@ app.use("/seahorses", seahorseRouter)
 // app.use("/crustaceans", crustaceansRouter)
 // app.use("/reef-dwellers", reefDwellersRouter)
 
-
-
 //Helper Functions//
 const categoryName = "Home"
 
@@ -25,16 +23,24 @@ export const getSidebarContent = (db) => {
   return sideBarData
 }
 
-export const findCategory = (db = groups) => {
-  let currentCategory = db.find(e => e.name === categoryName)
+export const findCategory = (db = groups, category) => {
+  let currentCategory = db.find(e => e.name === category)
   return currentCategory
+}
+
+export const findNavContent = (db = groups) => {
+  let navData = db.filter(e => e.name !== "Home")
+  return navData
 }
 
 app.get('/', (req, res) => {
   res.render(path.join('pages/index'), {
-    category: findCategory(),
+    navMenu: findNavContent(),
+    category: findCategory(groups, categoryName),
     sideBar: getSidebarContent(groups)
   })
 })
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+
+export default app

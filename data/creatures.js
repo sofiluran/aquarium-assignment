@@ -4,6 +4,10 @@ export const groups = [
     description: "Welcome to Our Aquarium, where the wonders of Australia's deep blue are brought right to your fingertips! Whether you're here to marvel at the eight-armed geniuses of the reef or the armored architects of the seafloor, there is something enchanting waiting around every corner. Take a slow, deliberate stroll past our delicate seahorses, or try to spot a master of disguise hiding in plain sight among our clever crustaceans. We've carefully designed every habitat to feel just like home for our finned and many-legged friends, from the sun-drenched shallows to the mysterious deep. You might find yourself in a staring contest with a Southern Sand Octopus or watching the vibrant parade of our colorful reef dwellers. Our mission is to share the magic of these exotic marine treasures while highlighting the importance of protecting their fragile underwater worlds. Dive into the adventure today and discover the incredible stories living beneath the surface!"
   },
   {
+    name: "About",
+    description: "Our Aquarium has some of the most specialized and accomplished staff in the country. We are specially equipped to give the best care to the animals that have been placed in our care. Some of us are expert divers, while others specialize in marine biology, fish medicine, zoology, and many other specialized disciplines. Feel free to read more about us in our bios. "
+  },
+  {
     name: "Octopi",
     description: "Australia is home to some of the most intelligent and visually striking octopus species on the planet, and our aquarium brings these remarkable animals into clear view. Our octopus exhibits showcase rare and elusive species found along Australia's coastlines, reefs, and deeper waters. Visitors can observe their problem-solving abilities, dynamic camouflage, and unique hunting behaviors up close. From beautifully cryptic sand dwellers to species with powerful defenses, each display highlights the adaptability of these cephalopods. Carefully designed habitats replicate their natural environments to encourage natural behavior. Together, these exhibits represent some of the finest and most fascinating octopi Australia has to offer."
   },
@@ -18,6 +22,33 @@ export const groups = [
   {
     name: "Reef Dwellers",
     description: "Our reef dweller exhibits immerse visitors in the vibrant world of Australia's coral reef ecosystems. Home to a dazzling variety of fish species, these displays capture the color, motion, and complexity of living reefs. From bold predators to tiny reef cleaners, each species plays a vital role in maintaining balance beneath the surface. Carefully curated habitats replicate the structure and flow of natural reefs. Visitors can observe schooling behavior, territorial displays, and intricate symbiotic relationships. The collection proudly showcases some of Australia's finest and most exotic reef fish, brought together in a living underwater panorama."
+  }
+]
+
+export const about = [
+  {
+    name: "Seth",
+    habitat: ["Carnarvon Flapjack Octopus", "Tasmanian Giant Freshwater Crayfish", "Soldier Crab"],
+    diet: "hamburger",
+    lifespan: "Short as long as he keeps eating hamburgers",
+    size: "roughly 1.8m",
+    description: "Seth is our crab enthusiast. He often wanders around sideways, snapping his hands open and shut and bubbling at the mouth. He also takes care ofsome of our octopus exhibits, throwing in the octopi's meals from afar. He has a degree in Marine Biology and a PhD in Crustacean Criminology."
+  },
+  {
+    name: "Sofia",
+    habitat: ["Blanket Octopus", "White's Seahorse", "Pygmy Seahorse"],
+    diet: "fish",
+    lifespan: "unknown",
+    size: "roughly 1.6m",
+    description: "Sofia takes care of our seahorses and octopi. She gained attention here at the aquarium when we noticed some of the handfish going missing. At the same time, Sofia was seen having a snack of fish fingers. She was put on probation until the accusations were dropped and since then has been a very committed member of the aquarium."
+  },
+  {
+    name: "Prashanthi",
+    habitat: ["Rainbow Parrotfish", "Wobbegong Shark", "Balmain Bug"],
+    diet: "water",
+    lifespan: "90 years",
+    size: "roughly 1.5m",
+    description: "Prashanti is the aquariums most accomplished diver. She spends most of her time underwater, and has been known not to return to the surface for hours. She exhibits a great love for the rainbow parrotfish, and we often see her swimming along in a school of parrotfish. She has a masters in Fish Communications and a phD in Fish Fine Arts."
   }
 ]
 
