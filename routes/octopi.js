@@ -1,7 +1,7 @@
 import express from "express"
 import { groups } from '../data/creatures.js'
 import { octopi } from '../data/creatures.js'
-import { getSidebarContent, findCategory } from "../index.js"
+import { getSidebarContent, findCategory, findNavContent } from "../index.js"
 
 const octopiRouter = express.Router()
 const categoryName = 'Octopi'
@@ -14,7 +14,8 @@ const findSpecies = (speciesName, db) => {
 
 octopiRouter.get('/', (req, res) => {
   res.render('pages/index', {
-    category: findCategory(),
+    navMenu: findNavContent(),
+    category: findCategory(groups, categoryName),
     sideBar: getSidebarContent(octopi)
   })
 })
@@ -23,6 +24,7 @@ octopiRouter.get('/species', (req, res) => {
   if(!req.query.name) return res.redirect(`/${categoryName.toLowerCase()}`)
   const creature = findSpecies(req.query.name.toLowerCase(), octopi)
   res.render('pages/index', {
+    navMenu: findNavContent(),
     category: categoryName,
     sideBar: getSidebarContent(octopi),
     species: creature

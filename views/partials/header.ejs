@@ -1,5 +1,28 @@
+<%  let leftNav = [] %>
+<%  let rightNav = [] %>
+<% if(locals.navMenu) { %>
+<%  let halfway = (locals.navMenu.length / 2) %>
+<%  locals.navMenu.forEach((e, i) => { %>
+<%    if(i < halfway) { %>
+<%       leftNav.push(e) %>
+<%    } else { %>
+<%       rightNav.push(e) %>
+<% }}) %>
+<% console.log(rightNav) %>
+<% } %>
+
 <header class="header">
-  <nav class="nav-left"></nav>
-  <div class="logo-container"></div>
-  <nav class="nav-right"></nav>
+  <nav class="nav-left nav">
+    <% leftNav.forEach(j=> { %>
+      <a class="nav-item" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%></a>
+    <% }) %>
+  </nav>
+  <div class="logo-container">
+    <img src="/images/logo.png" alt="Aquarium Logo" class="logo" />
+  </div>
+  <nav class="nav-right nav">
+    <% rightNav.forEach(j=> { %>
+      <a class="nav-item" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%></a>
+    <% }) %>
+  </nav>
 </header>
