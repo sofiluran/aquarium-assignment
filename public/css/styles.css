@@ -11,23 +11,39 @@ html, body {
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 90px;
+}
+
+.nav-container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
 }
 
 .nav {
   height: fit-content;
+  flex: 1;
+  gap: 15px;
   padding: 0 10px;
   width: fit-content;
 }
 
 .nav-item {
+  color: black;
   font-size: 1.5rem;
-  padding: 0 8px;
-  text-decoration: none;
   font-weight: 300;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-left {
+  justify-content: flex-start;
+  text-align: right;
 }
 
 .logo-container {
@@ -39,7 +55,7 @@ html, body {
 }
 
 .logo {
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 

@@ -12,17 +12,19 @@
 <% } %>
 
 <header class="header">
-  <nav class="nav-left nav">
-    <% leftNav.forEach(j=> { %>
-      <a class="nav-item" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%></a>
-    <% }) %>
-  </nav>
-  <div class="logo-container">
-    <img src="/images/logo.png" alt="Aquarium Logo" class="logo" />
+  <div class="nav-container">
+    <nav class="nav-left nav">
+      <% leftNav.forEach(j=> { %>
+        <a class="nav-item" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%></a>
+      <% }) %>
+    </nav>
+    <a class="logo-container" href="/">
+      <img src="/images/logo.png" alt="Aquarium Logo" class="logo" />
+    </a>
+    <nav class="nav-right nav">
+      <% rightNav.forEach(j=> { %>
+        <a class="nav-item" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%></a>
+      <% }) %>
+    </nav>
   </div>
-  <nav class="nav-right nav">
-    <% rightNav.forEach(j=> { %>
-      <a class="nav-item" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%></a>
-    <% }) %>
-  </nav>
 </header>
