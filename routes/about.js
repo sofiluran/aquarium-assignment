@@ -16,7 +16,7 @@ aboutRouter.get('/', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
     category: findCategory(groups, categoryName),
-    sideBar: getSidebarContent(about)
+    sideBar: getSidebarContent(about, categoryName)
   })
 })
 
@@ -26,7 +26,7 @@ aboutRouter.get('/species', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
     category: categoryName,
-    sideBar: getSidebarContent(about),
+    sideBar: getSidebarContent(about, categoryName),
     species: creature
   })
 })
