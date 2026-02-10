@@ -1,0 +1,18 @@
+
+  <div class="content">
+    <% if(locals.species) { %>
+      <div class="title"><%= locals.species.name %></div>
+      <div class="description"><%= locals.species.description %></div>
+        <% if(locals.species.diet) { %>
+          <div class="facts">
+            <div class="habitat">Habitat: <%= locals.species.habitat.join(", ") %>.</div>
+            <div class="diet">Diet: <%= locals.species.diet %>.</div>
+            <div class="lifespan">Lifespan: <%= locals.species.lifespan %>.</div>
+            <div class="size">Size: <%= locals.species.size %>.</div>
+          </div>
+       <% } %>
+    <% } else if(locals.category) { %>
+      <div class="title"><%= locals.category.name %></div>
+      <div class="description"><%= locals.category.description %></div>
+    <% } %>
+  </div>
