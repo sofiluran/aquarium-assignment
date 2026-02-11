@@ -9,14 +9,24 @@ export const groups = [
   },
   {
     name: "Octopi",
+    image: "",
     description: "Australia is home to some of the most intelligent and visually striking octopus species on the planet, and our aquarium brings these remarkable animals into clear view. Our octopus exhibits showcase rare and elusive species found along Australia's coastlines, reefs, and deeper waters. Visitors can observe their problem-solving abilities, dynamic camouflage, and unique hunting behaviors up close. From beautifully cryptic sand dwellers to species with powerful defenses, each display highlights the adaptability of these cephalopods. Carefully designed habitats replicate their natural environments to encourage natural behavior. Together, these exhibits represent some of the finest and most fascinating octopi Australia has to offer."
   },
   {
     name: "Crustaceans",
+    media: {
+      path: "/videos/crustaceans.mp4",
+      type: "video"
+    },
     description: "Our crustacean exhibits celebrate the armored architects of Australia's marine ecosystems. Featuring an array of crabs, lobsters, shrimp, and other remarkable species, these displays highlight both beauty and resilience. Many of the species on show are masters of disguise, blending seamlessly into reefs, rock pools, and sandy seafloors. Others stand out through vibrant coloration or unusual body forms. Visitors can explore how crustaceans shape reef health through scavenging, cleaning, and burrowing behaviors. The collection boasts some of Australia's most exotic and rarely seen crustaceans, presented in immersive, habitat-rich exhibits."
   },
   {
     name: "Seahorses",
+    media: 
+    {
+      path: "/videos/seahorses.mp4",
+      type: "video"
+    },
     description: "Our seahorse exhibits offer an intimate look into one of the ocean's most enchanting and delicate inhabitants. Australia is home to several unique seahorse species, and our aquarium proudly showcases these iconic animals in carefully balanced environments. Visitors can watch as seahorses anchor themselves to seagrass and coral using their prehensile tails. Their slow, deliberate movements contrast beautifully with the surrounding reef life. These exhibits also highlight the remarkable role of males in carrying and giving birth to young. Together, they represent some of Australia's most treasured and unusual marine species."
   },
   {
@@ -149,6 +159,10 @@ export const seahorses = [
   },
   {
     name: "Pygmy Seahorse",
+    media: {
+      path: "/images/pygmy-seahorse.jpg",
+      type: "image"
+    },
     habitat: ["Gorgonian Corals", "Deep Reef Slopes"],
     diet: "Tiny Copepods, Microcrustaceans",
     lifespan: "1-2 years",
