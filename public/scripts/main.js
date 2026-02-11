@@ -54,7 +54,7 @@ const expandLine = (element) => {
 const shrinkLine = (element) => {
   gsap.to(element, {
     scaleX: 0,
-    duration: .6,
+    duration: .4,
     ease: "power1.out",
   })
 }
