@@ -12,7 +12,7 @@
             <% } %>
         <% } %>
       </div>
-      <div class="title"><%= locals.species.name %></div>
+      <div class="title <%=locals.species.theme === "light" ? "light" : "dark"%>"><%= locals.species.name %></div>
       <div class="description"><%= locals.species.description %></div>
         <% if(locals.species.diet) { %>
           <div class="facts">
@@ -34,7 +34,7 @@
             <% } %>
         <% } %>
       </div>
-      <div class="title"><%= locals.category.name %></div>
+      <div class="title <%=locals.category.theme === "light" ? "light" : "dark"%>"><%= locals.category.name %></div>
       <div class="description"><%= locals.category.description %></div>
     <% } %>
   </div>
