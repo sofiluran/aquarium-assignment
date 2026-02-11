@@ -16,7 +16,7 @@
 <%   pageTheme = locals.category.theme %>
 <%  } %>
 
-<header class="header">
+<header class="header <%=pageTheme === "light" ? "header-light" : "header-dark"%>">
   <div class="nav-container">
     <nav class="nav-left nav">
       <% leftNav.forEach(j=> { %>
