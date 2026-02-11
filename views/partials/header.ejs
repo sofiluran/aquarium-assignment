@@ -16,11 +16,11 @@
 <%   pageTheme = locals.category.theme %>
 <%  } %>
 
-<header class="header">
+<header class="header <%=pageTheme === "light" ? "header-light" : "header-dark"%>">
   <div class="nav-container">
     <nav class="nav-left nav">
       <% leftNav.forEach(j=> { %>
-        <a class="nav-item <%=pageTheme === "light" ? "light" : "dark"%>" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%></a>
+        <a class="nav-item <%=pageTheme === "light" ? "light" : "dark"%>" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%><div class="nav-underline <%=pageTheme === "light" ? "nav-underline-light" : "nav-underline-dark" %>"></div></a>
       <% }) %>
     </nav>
     <a class="logo-container" href="/">
@@ -28,7 +28,7 @@
     </a>
     <nav class="nav-right nav">
       <% rightNav.forEach(j=> { %>
-        <a class="nav-item <%=pageTheme === "light" ? "light" : "dark"%>" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%></a>
+        <a class="nav-item <%=pageTheme === "light" ? "light" : "dark"%>" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%><div class="nav-underline <%=pageTheme === "light" ? "nav-underline-light" : "nav-underline-dark" %>"></div></a>
       <% }) %>
     </nav>
   </div>

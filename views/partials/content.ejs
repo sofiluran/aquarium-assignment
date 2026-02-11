@@ -2,6 +2,7 @@
   <div class="content">
     <% if(locals.species) { %>
       <div class="media-area">
+        <div class="media-cover"></div>
         <% if(locals.species.media){ %>
             <% if(locals.species.media.type === "image"){ %>
                 <img class="content-media" src="<%=locals.species.media.path%>" alt="<%=locals.species.name%>"/>
@@ -12,7 +13,7 @@
             <% } %>
         <% } %>
       </div>
-      <div class="title <%=locals.species.theme === "light" ? "light" : "dark"%>"><%= locals.species.name %></div>
+      <div class="title <%=locals.species.theme === "light" ? "light" : "dark"%>"><%= locals.species.name.toUpperCase() %></div>
       <div class="description"><%= locals.species.description %></div>
         <% if(locals.species.diet) { %>
           <div class="facts">
@@ -24,6 +25,7 @@
        <% } %>
     <% } else if(locals.category) { %>
       <div class="media-area">
+        <div class="media-cover"></div>
         <% if(locals.category.media){ %>
             <% if(locals.category.media.type === "image"){ %>
                 <img class="content-media" src="<%=locals.category.media.path%>" alt="<%=locals.category.name%>"/>
@@ -34,7 +36,7 @@
             <% } %>
         <% } %>
       </div>
-      <div class="title <%=locals.category.theme === "light" ? "light" : "dark"%>"><%= locals.category.name %></div>
+      <div class="title <%=locals.category.theme === "light" ? "light" : "dark"%>"><%= locals.category.name.toUpperCase() %></div>
       <div class="description"><%= locals.category.description %></div>
     <% } %>
   </div>
