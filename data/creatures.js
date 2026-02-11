@@ -32,14 +32,14 @@ export const about = [
     diet: "hamburger",
     lifespan: "Short as long as he keeps eating hamburgers",
     size: "roughly 1.8m",
-    description: "Seth is our crab enthusiast. He often wanders around sideways, snapping his hands open and shut and bubbling at the mouth. He also takes care ofsome of our octopus exhibits, throwing in the octopi's meals from afar. He has a degree in Marine Biology and a PhD in Crustacean Criminology."
+    description: "Seth is our crab enthusiast. He often wanders around sideways, snapping his hands open and shut and bubbling at the mouth. He also takes care of some of our octopus exhibits, throwing in the octopi's meals from afar. He has a degree in Marine Biology and a PhD in Crustacean Criminology."
   },
   {
     name: "Sofia",
     habitat: ["Blanket Octopus", "White's Seahorse", "Pygmy Seahorse"],
     diet: "fish",
     lifespan: "unknown",
-    size: "roughly 1.6m",
+    size: "roughly 1.7m",
     description: "Sofia takes care of our seahorses and octopi. She gained attention here at the aquarium when we noticed some of the handfish going missing. At the same time, Sofia was seen having a snack of fish fingers. She was put on probation until the accusations were dropped and since then has been a very committed member of the aquarium."
   },
   {
@@ -47,7 +47,7 @@ export const about = [
     habitat: ["Rainbow Parrotfish", "Wobbegong Shark", "Balmain Bug"],
     diet: "water",
     lifespan: "90 years",
-    size: "roughly 1.5m",
+    size: "roughly 1.6m",
     description: "Prashanti is the aquariums most accomplished diver. She spends most of her time underwater, and has been known not to return to the surface for hours. She exhibits a great love for the rainbow parrotfish, and we often see her swimming along in a school of parrotfish. She has a masters in Fish Communications and a phD in Fish Fine Arts."
   }
 ]

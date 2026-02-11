@@ -17,6 +17,8 @@ body {
 
 .header {
   height: 90px;
+  position: absolute;
+  width: 100%;
 }
 
 .nav-container {
@@ -31,7 +33,6 @@ body {
   flex: 1;
   gap: 15px;
   padding: 0 10px;
-  width: fit-content;
 }
 
 .nav-item {
@@ -73,14 +74,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: clamp(250px, 20%, 350px);
   height: 100%;
 }
 
 .sidebar {
   border-radius: 15px;
   display: flex;
-  height: 80%;
+  height: 65%;
   overflow: hidden;
   position: relative;
   width: 80%;
@@ -115,5 +116,23 @@ body {
   font-size: 1.4rem;
   padding: 8px 0;
   text-decoration: none;
+}
+
+.content {
+  flex: 1;
+  padding: 5px 5px;
+  padding-right: 20px;
+  margin-top: 20%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 9px 20px;
+}
+
+.content-media {
+  height: 40%;
+  width: 100%;
 }
 
