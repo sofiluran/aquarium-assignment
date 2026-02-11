@@ -137,7 +137,7 @@ export const octopi = [
     lifespan: "2-3 years",
     size: "12-20cm",
     description: "The Blue Ringed Octopus is a small but extraordinarily dangerous species found in the coastal waters between Japan and Australia. At rest, it appears relatively plain, but when threatened it displays vivid, pulsing blue rings as a warning signal. The octopus's bite contains tetrodotoxin, a powerful neurotoxin. One bite is enough to cause paralysis or death to 23 people. Despite their potency, Blue Ringed Octopuses are shy and prefer to avoid confrontation. They rely on intelligence and camouflage to hunt and escape predators. Their striking colors and lethal reputation have made them one of the most famous octopuses in the world.",
-    theme: "light"
+    theme: "dark"
   }
 ]
 
