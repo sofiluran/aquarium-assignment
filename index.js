@@ -2,6 +2,9 @@ import express from "express"
 import * as path from 'path'
 import octopiRouter from "./routes/octopi.js"
 import seahorseRouter from "./routes/seahorses.js"
+import crustaceansRouter from "./routes/crustaceans.js"
+import reefDwellersRouter from "./routes/reef-dwellers.js"
+import aboutRouter from "./routes/about.js"
 import { groups } from './data/creatures.js'
 
 const app = express()
@@ -12,15 +15,21 @@ app.use(express.static("public"))
 
 app.use("/octopi", octopiRouter)
 app.use("/seahorses", seahorseRouter)
-// app.use("/crustaceans", crustaceansRouter)
-// app.use("/reef-dwellers", reefDwellersRouter)
+app.use("/crustaceans", crustaceansRouter)
+app.use("/reef-dwellers", reefDwellersRouter)
+app.use("/about", aboutRouter)
 
 //Helper Functions//
 const categoryName = "Home"
 
-export const getSidebarContent = (db) => {
-  let sideBarData = db.map(e => e.name)
-  return sideBarData
+export const getSidebarContent = (db, category) => {
+  let categoryGroups = db.map(e => e.name)
+  let sideBarTitle = category
+  let sidebarData = {
+    title: sideBarTitle,
+    data: categoryGroups
+  }
+  return sidebarData
 }
 
 export const findCategory = (db = groups, category) => {
@@ -37,7 +46,7 @@ app.get('/', (req, res) => {
   res.render(path.join('pages/index'), {
     navMenu: findNavContent(),
     category: findCategory(groups, categoryName),
-    sideBar: getSidebarContent(groups)
+    sideBar: getSidebarContent(groups, categoryName)
   })
 })
 
