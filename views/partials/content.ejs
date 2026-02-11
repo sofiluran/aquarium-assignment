@@ -1,0 +1,40 @@
+
+  <div class="content">
+    <% if(locals.species) { %>
+      <div class="media-area">
+        <% if(locals.species.media){ %>
+            <% if(locals.species.media.type === "image"){ %>
+                <img class="content-media" src="<%=locals.species.media.path%>" alt="<%=locals.species.name%>"/>
+            <% } else if(locals.species.media.type === "video"){ %>
+                <video autoplay loop muted class="content-media">
+                  <source src="<%=locals.species.media.path%>" type="video/mp4" alt="<%=locals.species.name%>"/>
+                </video>
+            <% } %>
+        <% } %>
+      </div>
+      <div class="title <%=locals.species.theme === "light" ? "light" : "dark"%>"><%= locals.species.name %></div>
+      <div class="description"><%= locals.species.description %></div>
+        <% if(locals.species.diet) { %>
+          <div class="facts">
+            <div class="habitat">Habitat: <%= locals.species.habitat.join(", ") %>.</div>
+            <div class="diet">Diet: <%= locals.species.diet %>.</div>
+            <div class="lifespan">Lifespan: <%= locals.species.lifespan %>.</div>
+            <div class="size">Size: <%= locals.species.size %>.</div>
+          </div>
+       <% } %>
+    <% } else if(locals.category) { %>
+      <div class="media-area">
+        <% if(locals.category.media){ %>
+            <% if(locals.category.media.type === "image"){ %>
+                <img class="content-media" src="<%=locals.category.media.path%>" alt="<%=locals.category.name%>"/>
+            <% } else if(locals.category.media.type === "video"){ %>
+                <video autoplay loop muted class="content-media">
+                  <source src="<%=locals.category.media.path%>" type="video/mp4" alt="<%=locals.category.name%>"/>
+                </video>
+            <% } %>
+        <% } %>
+      </div>
+      <div class="title <%=locals.category.theme === "light" ? "light" : "dark"%>"><%= locals.category.name %></div>
+      <div class="description"><%= locals.category.description %></div>
+    <% } %>
+  </div>
