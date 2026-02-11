@@ -16,7 +16,7 @@ crustaceansRouter.get('/', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
     category: findCategory(groups, categoryName),
-    sideBar: getSidebarContent(crustaceans)
+    sideBar: getSidebarContent(crustaceans, categoryName)
   })
 })
 
@@ -26,7 +26,7 @@ crustaceansRouter.get('/species', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
     category: categoryName,
-    sideBar: getSidebarContent(crustaceans),
+    sideBar: getSidebarContent(crustaceans, categoryName),
     species: creature
   })
 })

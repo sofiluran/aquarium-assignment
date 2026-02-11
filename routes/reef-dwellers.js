@@ -16,7 +16,7 @@ reefDwellersRouter.get('/', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
     category: findCategory(groups, categoryName),
-    sideBar: getSidebarContent(reefDwellers)
+    sideBar: getSidebarContent(reefDwellers, categoryName)
   })
 })
 
@@ -26,7 +26,7 @@ reefDwellersRouter.get('/species', (req, res) => {
   res.render('pages/index', {
     navMenu: findNavContent(),
     category: categoryName,
-    sideBar: getSidebarContent(reefDwellers),
+    sideBar: getSidebarContent(reefDwellers, categoryName),
     species: creature
   })
 })
