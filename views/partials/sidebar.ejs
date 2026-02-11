@@ -7,8 +7,10 @@
       <% if(locals.sideBar) { %>
         <% if(locals.sideBar.title === "Home") { %>
           <div class="sidebar-header"><%=locals.sideBar.title.toUpperCase()%></div>
+          <div class="sidebar-divider"></div>
         <% } else { %>
           <a class="sidebar-header" href="/<%=locals.sideBar.title.toLowerCase().replace(/ /g, '-')%>"><%=locals.sideBar.title.toUpperCase()%></a>
+          <div class="sidebar-divider"></div>
         <% } %>
         <% locals.sideBar.data.forEach(e => { %>
           <% if(locals.sideBar.title === "Home") { if(e !== "Home") {%>
