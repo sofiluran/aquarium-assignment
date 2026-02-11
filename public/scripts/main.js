@@ -7,15 +7,6 @@ const slideInLeft = (element) => {
   })
 }
 
-const slideInRight = (element) => {
-  gsap.from(element, {
-    x: 100,
-    duration: .9,
-    ease: "elastic",
-    stagger: .03
-  })
-}
-
 const slideUp = (element) => {
   gsap.from(element, {
     y: 80,
@@ -73,12 +64,8 @@ const sidebarItems = document.querySelectorAll('.sidebar-item')
 const sidebarHeader = document.querySelector('.sidebar-header')
 const logo = document.querySelector('.logo')
 
-
-
 fadeIn(logo)
 dropDown(logo)
-// slideInLeft(leftItems)
-// slideInRight(rightItems)
 dropDown(navItems)
 fadeIn(navItems)
 fadeIn(title)
