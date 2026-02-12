@@ -60,7 +60,7 @@ const shrinkLine = (element) => {
   })
 }
 
-const factText = document.querySelectorAll("")
+// const factText = document.querySelectorAll("")
 
 const navItems = document.querySelectorAll('.nav-item')
 navItems.forEach(item => {
