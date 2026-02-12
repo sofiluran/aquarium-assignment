@@ -15,7 +15,7 @@
 <%  } else { %>
 <%   pageTheme = locals.category.theme %>
 <%  } %>
-
+                      
 <header class="header <%=pageTheme === "light" ? "header-light" : "header-dark"%>">
   <div class="nav-container">
     <nav class="nav-left nav">
@@ -30,6 +30,21 @@
       <% rightNav.forEach(j=> { %>
         <a class="nav-item <%=pageTheme === "light" ? "light" : "dark"%>" href="/<%= j.name.toLowerCase().replace(/ /g, '-') %>"><%=j.name.toUpperCase()%><div class="nav-underline <%=pageTheme === "light" ? "nav-underline-light" : "nav-underline-dark" %>"></div></a>
       <% }) %>
+    </nav>
+    <div class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    
+    <nav class="mobile-nav">
+      <% if(locals.navMenu) { %>
+        <% locals.navMenu.forEach(item => { %>
+          <a class="mobile-nav-item" href="/<%= item.name.toLowerCase().replace(/ /g, '-') %>">
+            <%= item.name.toUpperCase() %>
+          </a>
+        <% }) %>
+      <% } %>
     </nav>
   </div>
 </header>

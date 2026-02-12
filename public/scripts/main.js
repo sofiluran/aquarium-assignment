@@ -1,3 +1,8 @@
+import { gsap } from "https://cdn.skypack.dev/gsap"
+import { Flip } from "https://cdn.skypack.dev/gsap/Flip"
+
+gsap.registerPlugin(Flip);
+
 const slideInLeft = (element) => {
   gsap.from(element, {
     x: -100,
@@ -46,7 +51,18 @@ const fadeIn = (element) => {
     autoAlpha: 1,
     opacity: 0,
     ease: "power2out",
-    duration: 1.1
+    duration: .5
+  })
+}
+
+const fadeOn = (element) => {
+  console.log('fading on' + element)
+  gsap.to(element, {
+    autoAlpha: 1,
+    opacity: 1,
+    y: 0,
+    ease: "power2out",
+    duration: .5
   })
 }
 
@@ -87,6 +103,10 @@ const shrinkLine = (element) => {
   })
 }
 
+window.addEventListener('resize', ()=> {
+  checkWindowSize()
+})
+
 const factText = document.querySelectorAll(".fact-text")
 factText.forEach(text => {
   let p = text.innerText
@@ -102,25 +122,67 @@ navItems.forEach(item => {
   item.addEventListener('mouseleave', ()=> shrinkLine(underlinedItem))
 });
 
-const sidebar = document.querySelector('sidebar')
+const sidebar = document.querySelector('.sidebar')
+const sidebarContainer = document.querySelector('.sidebar-area')
 const sidebarList = document.querySelector('.sidebar-list')
 const minusButton = document.querySelector('.minus-icon')
 const plusButton = document.querySelector('.plus-icon')
+
 minusButton.addEventListener('click', ()=> {
-  fadeOut(minusButton)
-  fadeOut(sidebarList)
-  fadeIn(plusButton)
+  sidebarIn()
 })
 
 plusButton.addEventListener('click', ()=> {
-  fadeIn(minusButton)
-  fadeIn(sidebarList)
-  fadeOut(plusButton)
+  sidebarOut()
 })
 
+const sideBarButton = (willClose = true) => {
+  const sidebarState = Flip.getState(sidebar)
+  const sidebarContState = Flip.getState(sidebarContainer)
+  if(willClose) {
+    sidebar.classList.add('sidebar-closed')
+    sidebarContainer.classList.add('sidebar-area-closed')
+  } else {
+    sidebar.classList.remove('sidebar-closed')
+    sidebarContainer.classList.remove('sidebar-area-closed')
+  }
+  Flip.from(sidebarState, {
+    duration: .2,
+    delay: .03,
+  })
+  Flip.from(sidebarContState, {
+    duration: .2,
+    delay: .03
+  })
+}
+
+const sidebarIn = () => {
+  fadeOut(minusButton)
+  fadeOut(sidebarList)
+  fadeOn(plusButton)
+  sideBarButton(true)
+}
+
+const sidebarOut = () => {
+  fadeOn(minusButton)
+  fadeOn(sidebarList)
+  fadeOut(plusButton)
+  sideBarButton(false)
+}
+
+const checkWindowSize = () => {
+  if (window.innerWidth < 954) {
+    sidebar.classList.add('sidebar-closed')
+    sidebarContainer.classList.add('sidebar-area-closed')
+    sidebarIn()
+  } else {
+    sidebar.classList?.remove('sidebar-closed')
+    sidebarContainer.classList?.remove('sidebar-area-closed')
+    sidebarOut()
+  }
+}
+
 const letters = document.querySelectorAll('.letter')
-const leftItems = document.querySelectorAll('.nav-left .nav-item')
-const rightItems = document.querySelectorAll('.nav-right .nav-item')
 const title = document.querySelector('.title')
 const sidebarItems = document.querySelectorAll('.sidebar-item')
 const sidebarHeader = document.querySelector('.sidebar-header')
@@ -138,3 +200,12 @@ fadeIn(sidebarItems)
 slideUp(sidebarItems)
 bubbleAnimation(letters)
 bubbleFadeOut(bubbleVideo)
+checkWindowSize()
+
+
+const hamburger = document.querySelector(".hamburger")
+const mobileNav = document.querySelector(".mobile-nav")
+
+hamburger.addEventListener("click", () => {
+  mobileNav.classList.toggle("active")
+})
