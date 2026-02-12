@@ -7,6 +7,16 @@ const slideInLeft = (element) => {
   })
 }
 
+const bubbleAnimation = (element) => {
+  gsap.from(element, {
+    y: 100,
+    x: "random(-50, 50)",
+    duration: .7,
+    ease: "elastic",
+    stagger: .08
+  })
+}
+
 const slideUp = (element) => {
   gsap.from(element, {
     y: 80,
@@ -49,6 +59,8 @@ const shrinkLine = (element) => {
     ease: "power1.out",
   })
 }
+
+const factText = document.querySelectorAll("")
 
 const navItems = document.querySelectorAll('.nav-item')
 navItems.forEach(item => {
