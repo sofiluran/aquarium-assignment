@@ -234,4 +234,3 @@ fadeIn(sidebarItems)
 slideUp(sidebarItems)
 bubbleAnimation(letters)
 bubbleFadeOut(bubbleVideo)
-
