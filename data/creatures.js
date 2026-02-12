@@ -10,7 +10,7 @@ export const groups = [
   },
   {
     name: "About",
-     media: {
+    media: {
       path: "/videos/about.mp4",
       type: "video"
     },
@@ -48,9 +48,9 @@ export const groups = [
   {
     name: "Reef Dwellers",
     media: {
-      path: "/videos/reef.mp4", 
+      path: "/videos/reef.mp4",
       type: "video"
-    },    
+    },
     description: "Our reef dweller exhibits immerse visitors in the vibrant world of Australia's coral reef ecosystems. Home to a dazzling variety of fish species, these displays capture the color, motion, and complexity of living reefs. From bold predators to tiny reef cleaners, each species plays a vital role in maintaining balance beneath the surface. Carefully curated habitats replicate the structure and flow of natural reefs. Visitors can observe schooling behavior, territorial displays, and intricate symbiotic relationships. The collection proudly showcases some of Australia's finest and most exotic reef fish, brought together in a living underwater panorama.",
     theme: "dark"
   }
@@ -59,37 +59,49 @@ export const groups = [
 export const about = [
   {
     name: "Seth",
+    media: {
+      path: "/videos/crab-seth.mp4",
+      type: "video"
+    },
     habitat: ["Carnarvon Flapjack Octopus", "Tasmanian Giant Freshwater Crayfish", "Soldier Crab"],
     diet: "hamburger",
     lifespan: "Short as long as he keeps eating hamburgers",
     size: "roughly 1.8m",
     description: "Seth is our crab enthusiast. He often wanders around sideways, snapping his hands open and shut and bubbling at the mouth. He also takes care of some of our octopus exhibits, throwing in the octopi's meals from afar. He has a degree in Marine Biology and a PhD in Crustacean Criminology.",
-    theme: "light"
+    theme: "dark"
   },
   {
     name: "Sofia",
+    media: {
+      path: "/videos/fish-sofia.mp4",
+      type: "video"
+    },
     habitat: ["Blanket Octopus", "White's Seahorse", "Pygmy Seahorse"],
     diet: "fish",
     lifespan: "unknown",
     size: "roughly 1.7m",
     description: "Sofia takes care of our seahorses and octopi. She gained attention here at the aquarium when we noticed some of the handfish going missing. At the same time, Sofia was seen having a snack of fish fingers. She was put on probation until the accusations were dropped and since then has been a very committed member of the aquarium.",
-    theme: "light"
+    theme: "dark"
   },
   {
     name: "Prashanthi",
+    media: {
+      path: "/videos/turtle.mp4",
+      type: "video"
+    },
     habitat: ["Rainbow Parrotfish", "Wobbegong Shark", "Balmain Bug"],
     diet: "water",
     lifespan: "90 years",
     size: "roughly 1.6m",
     description: "Prashanti is the aquariums most accomplished diver. She spends most of her time underwater, and has been known not to return to the surface for hours. She exhibits a great love for the rainbow parrotfish, and we often see her swimming along in a school of parrotfish. She has a masters in Fish Communications and a phD in Fish Fine Arts.",
-    theme: "light"
+    theme: "dark"
   }
 ]
 
 export const octopi = [
   {
     name: "Southern Sand Octopus",
-      media: {
+    media: {
       path: "/images/SouthernSandOctopus.jpg",
       type: "image"
     },
@@ -102,7 +114,7 @@ export const octopi = [
   },
   {
     name: "Blanket Octopus",
-      media: {
+    media: {
       path: "/images/BlanketOctopus.jpg",
       type: "image"
     },
@@ -115,7 +127,7 @@ export const octopi = [
   },
   {
     name: "Carnarvon Flapjack Octopus",
-      media: {
+    media: {
       path: "/images/CarnarvonFlapjackOctopus.jpg",
       type: "image"
     },
@@ -128,7 +140,7 @@ export const octopi = [
   },
   {
     name: "Blue Ringed Octopus",
-      media: {
+    media: {
       path: "/images/blue-ring-octopus.webp",
       type: "image"
     },
@@ -144,7 +156,7 @@ export const octopi = [
 export const crustaceans = [
   {
     name: "Soldier Crab",
-      media: {
+    media: {
       path: "/images/SoldierCrab.jpg",
       type: "image"
     },
@@ -157,7 +169,7 @@ export const crustaceans = [
   },
   {
     name: "Balmain Bug",
-      media: {
+    media: {
       path: "/images/BalmainBug.jpg",
       type: "image"
     },
@@ -170,7 +182,7 @@ export const crustaceans = [
   },
   {
     name: "Tasmanian Giant Freshwater Crayfish",
-      media: {
+    media: {
       path: "/images/TasmanianGiantFreshwaterCrayfish.webp",
       type: "image"
     },
@@ -183,7 +195,7 @@ export const crustaceans = [
   },
   {
     name: "Eastern King Prawn",
-      media: {
+    media: {
       path: "/images/Easternkingprawn.jpg",
       type: "image"
     },
@@ -199,7 +211,7 @@ export const crustaceans = [
 export const seahorses = [
   {
     name: "Leafy Sea Dragon",
-      media: {
+    media: {
       path: "/videos/leafy-seadragon.mp4",
       type: "video"
     },
