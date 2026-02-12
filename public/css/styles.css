@@ -3,7 +3,8 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -47,10 +48,30 @@ body {
 .nav-item {
   color: black;
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 300;
   padding: 0 10px;
   text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 4px;
+  background-color: #227286e0;
+  margin-right: 20px;
+  border-radius: 5px;
+  border: 1px solid #afbec2e0;
+}
+
+.mobile-nav-item {
+  display: none;
 }
 
 .light {
@@ -71,7 +92,6 @@ body {
 }
 
 .nav-underline {
-  height: 1.2px;
   width: 100%;
   transform: scaleX(0);
   transform-origin: left;
@@ -79,10 +99,12 @@ body {
 
 .nav-underline-light {
   background-color: black;
+  height: 1.8px;
 }
 
 .nav-underline-dark {
   background-color: white;
+  height: 1.2px;
 }
 
 .logo-container {
@@ -112,7 +134,7 @@ body {
   display: flex;
   height: 100%;
   justify-content: center;
-  width: clamp(250px, 20%, 350px);
+  width: clamp(250px, 24%, 425px);
 }
 
 .sidebar {
@@ -131,7 +153,6 @@ body {
   height: 100%;
   position: absolute;
   object-fit: contain;
-
 }
 
 .sidebar-list {
@@ -146,7 +167,7 @@ body {
 .sidebar-header {
   color: white;
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 300;
   padding-top: 14px;
   padding-bottom: 4px;
@@ -163,7 +184,7 @@ body {
 
 .sidebar-item {
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding: 8px 0;
   text-decoration: none;
   width: fit-content;
@@ -175,19 +196,6 @@ body {
   padding: 0 5px;
   padding-right: 20px;
   background: transparent;
-}
-
-.title {
-  font-size: 2.3rem;
-  font-weight: 300;
-  height: 6vh;
-  padding: 9px 5%;
-}
-
-.description {
-  padding: 6% 3%;
-  font-size: 1.4rem;
-  font-weight: 300;
 }
 
 .media-area {
@@ -215,10 +223,67 @@ body {
   width: 100%;
 }
 
-.facts {
-  padding: 10px 3.3%;
-  font-size: 1.5rem;
+.title {
+  font-size: 2.7rem;
   font-weight: 300;
+  height: 6vh;
+  padding: 9px 5%;
+}
+
+.description {
+  padding: 6% 3%;
+  padding-bottom: 2%;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.facts {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 18px;
+  margin: 0 3.3%;
+  font-weight: 300;
+  width: 93.4%;
+}
+
+.fact-item {
+  width: 20%;
+  border: rgba(165, 165, 165, 0.751) 2px solid;
+  border-radius: 12px;
+  padding: 15px 2%;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.bubbles {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  mix-blend-mode: screen;
+}
+
+.fact-text {
+  font-size: 1.5rem;
+  padding: 8px 0;
+}
+
+.habitat {
+  background: linear-gradient(70deg, rgb(86, 122, 195), rgb(16, 164, 159));
+}
+
+.diet {
+  background: linear-gradient(70deg, rgb(16, 164, 159), rgb(94, 115, 141));
+}
+
+.lifespan {
+  background: linear-gradient(70deg, rgb(94, 115, 141), rgb(86, 122, 195));
+}
+
+.size {
+  background: linear-gradient(70deg, rgb(86, 122, 195), rgb(16, 164, 159));
 }
 
 .footer {
@@ -232,4 +297,88 @@ body {
 
 .footer-content {
   font-size: 1rem;
+}
+
+@media (max-width: 954px) {
+
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 220px;
+    height: 300px;
+    background-color: #227286e0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 1000;
+
+    transform: translateX(100%);
+  }
+
+  .mobile-nav.active {
+    border-radius: 20px;
+    transform: translateX(0);
+    gap: 10px;
+  }
+
+  .mobile-nav-item {
+    display: block;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .facts {
+    display: block;
+  }
+
+  .fact-item {
+    margin: 10px;
+    width: 100%;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar-area {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sidebar {
+    margin-top: 150px;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+
+  .sidebar-video{
+    width: 100%;
+    height: auto;
+  }
+
+  .title {
+    color: black;
+  }
 }

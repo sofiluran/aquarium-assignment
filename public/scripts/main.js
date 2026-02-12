@@ -7,6 +7,16 @@ const slideInLeft = (element) => {
   })
 }
 
+const bubbleAnimation = (element) => {
+  gsap.from(element, {
+    y: 100,
+    x: "random(-50, 50)",
+    duration: .7,
+    ease: "elastic",
+    stagger: .08
+  })
+}
+
 const slideUp = (element) => {
   gsap.from(element, {
     y: 80,
@@ -50,6 +60,8 @@ const shrinkLine = (element) => {
   })
 }
 
+// const factText = document.querySelectorAll("")
+
 const navItems = document.querySelectorAll('.nav-item')
 navItems.forEach(item => {
   let underlinedItem = item.querySelector('.nav-underline')
@@ -73,3 +85,11 @@ slideUp(title)
 slideInLeft(sidebarHeader)
 fadeIn(sidebarItems)
 slideUp(sidebarItems)
+
+
+const hamburger = document.querySelector(".hamburger")
+const mobileNav = document.querySelector(".mobile-nav")
+
+hamburger.addEventListener("click", () => {
+  mobileNav.classList.toggle("active")
+})
