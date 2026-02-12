@@ -17,10 +17,30 @@
       <div class="description"><%= locals.species.description %></div>
         <% if(locals.species.diet) { %>
           <div class="facts">
-            <div class="habitat">Habitat: <%= locals.species.habitat.join(", ") %>.</div>
-            <div class="diet">Diet: <%= locals.species.diet %>.</div>
-            <div class="lifespan">Lifespan: <%= locals.species.lifespan %>.</div>
-            <div class="size">Size: <%= locals.species.size %>.</div>
+            <div class="habitat fact-item">Habitat
+              <video autoplay loop muted class="bubbles">
+                <source src="/videos/bubbles.mp4" type="video/mp4" alt="bubbles"/>
+              </video>
+              <div class="fact-text"><%= locals.species.habitat.join(", ") %>.</div>
+            </div>
+            <div class="diet fact-item">Diet
+              <video autoplay loop muted class="bubbles">
+                <source src="/videos/bubbles.mp4" type="video/mp4" alt="bubbles"/>
+              </video>
+              <div class="fact-text"><%= locals.species.diet %>.</div>
+            </div>
+            <div class="lifespan fact-item">Lifespan
+              <video autoplay loop muted class="bubbles">
+                <source src="/videos/bubbles.mp4" type="video/mp4" alt="bubbles"/>
+              </video>
+              <div class="fact-text"><%= locals.species.lifespan %>.</div>
+            </div>
+            <div class="size fact-item">Size
+              <video autoplay loop muted class="bubbles">
+                <source src="/videos/bubbles.mp4" type="video/mp4" alt="bubbles"/>
+              </video>
+              <div class="fact-text"><%= locals.species.size %>.</div>
+            </div>
           </div>
        <% } %>
     <% } else if(locals.category) { %>
