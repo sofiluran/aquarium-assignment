@@ -67,6 +67,7 @@ body {
   background-color: #227286e0;
   margin-right: 20px;
   border-radius: 5px;
+  border: 1px solid #afbec2e0;
 }
 
 .mobile-nav-item {
@@ -342,5 +343,42 @@ body {
     font-size: 1.5rem;
     margin-bottom: 10px;
     position: relative;
+  }
+
+  .facts {
+    display: block;
+  }
+
+  .fact-item {
+    margin: 10px;
+    width: 100%;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar-area {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sidebar {
+    margin-top: 150px;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+
+  .sidebar-video{
+    width: 100%;
+    height: auto;
+  }
+
+  .title {
+    color: black;
   }
 }
