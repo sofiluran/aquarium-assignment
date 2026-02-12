@@ -3,6 +3,12 @@
     <video autoplay loop muted class="sidebar-video">
       <source src="/videos/water-shimmer.mp4" type="video/mp4"/>
     </video>
+    <svg class="minus-icon icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 12H19" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="plus-icon icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="white" d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z"></path>
+      </svg>
     <div class="sidebar-list">
       <% if(locals.sideBar) { %>
         <% if(locals.sideBar.title === "Home") { %>
