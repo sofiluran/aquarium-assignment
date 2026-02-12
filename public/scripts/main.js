@@ -43,9 +43,21 @@ const slideUp = (element) => {
 
 const fadeIn = (element) => {
   gsap.from(element, {
+    autoAlpha: 1,
     opacity: 0,
     ease: "power2out",
     duration: 1.1
+  })
+}
+
+const fadeOut = (element) => {
+  gsap.to(element, {
+    autoAlpha: 0,
+    opacity: 0,
+    y: 40,
+    ease: "power2.out",
+    duration: .8,
+    stagger: .08
   })
 }
 
@@ -89,6 +101,22 @@ navItems.forEach(item => {
   item.addEventListener('mouseenter', ()=> expandLine(underlinedItem))
   item.addEventListener('mouseleave', ()=> shrinkLine(underlinedItem))
 });
+
+const sidebar = document.querySelector('sidebar')
+const sidebarList = document.querySelector('.sidebar-list')
+const minusButton = document.querySelector('.minus-icon')
+const plusButton = document.querySelector('.plus-icon')
+minusButton.addEventListener('click', ()=> {
+  fadeOut(minusButton)
+  fadeOut(sidebarList)
+  fadeIn(plusButton)
+})
+
+plusButton.addEventListener('click', ()=> {
+  fadeIn(minusButton)
+  fadeIn(sidebarList)
+  fadeOut(plusButton)
+})
 
 const letters = document.querySelectorAll('.letter')
 const leftItems = document.querySelectorAll('.nav-left .nav-item')
