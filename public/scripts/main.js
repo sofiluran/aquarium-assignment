@@ -68,11 +68,11 @@ const slideUp = (element) => {
 }
 
 const fadeIn = (element) => {
+  console.log(element)
   gsap.from(element, {
-    autoAlpha: 1,
     opacity: 0,
     ease: "power2out",
-    duration: .5
+    duration: 1
   })
 }
 
