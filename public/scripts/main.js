@@ -12,6 +12,27 @@ const slideInLeft = (element) => {
   })
 }
 
+const slideInRight = (element) => {
+  gsap.to(element, {
+    x: "0%",
+    duration: .7,
+    ease: "elastic.out(.8, .8)",
+    stagger: .03
+  })
+}
+
+const slideOutRight = (element) => {
+  gsap.to(element, {
+    x: "100%",
+    duration: .7,
+    ease: "elastic.out(.8, .8)",
+    stagger: .03,
+    onComplete: ()=> {
+      element.classList.remove('active')
+    }
+  })
+}
+
 const bubbleAnimation = (element) => {
   gsap.from(element, {
     y: 100,
@@ -56,7 +77,6 @@ const fadeIn = (element) => {
 }
 
 const fadeOn = (element) => {
-  console.log('fading on' + element)
   gsap.to(element, {
     autoAlpha: 1,
     opacity: 1,
@@ -102,6 +122,19 @@ const shrinkLine = (element) => {
     ease: "power1.out",
   })
 }
+
+const hamburger = document.querySelector(".hamburger")
+const mobileNav = document.querySelector(".mobile-nav")
+const mobileMenus = document.querySelectorAll('.mobile-nav-item')
+
+hamburger.addEventListener("click", (e) => {
+  if(mobileNav.classList.contains('active')){
+    slideOutRight(mobileNav)
+  } else{
+    mobileNav.classList.add('active')
+    slideInRight(mobileNav)
+  }
+})
 
 window.addEventListener('resize', ()=> {
   checkWindowSize()
@@ -189,6 +222,7 @@ const sidebarHeader = document.querySelector('.sidebar-header')
 const logo = document.querySelector('.logo')
 const bubbleVideo = document.querySelectorAll('.bubbles')
 
+checkWindowSize()
 fadeIn(logo)
 dropDown(logo)
 dropDown(navItems)
@@ -200,12 +234,4 @@ fadeIn(sidebarItems)
 slideUp(sidebarItems)
 bubbleAnimation(letters)
 bubbleFadeOut(bubbleVideo)
-checkWindowSize()
 
-
-const hamburger = document.querySelector(".hamburger")
-const mobileNav = document.querySelector(".mobile-nav")
-
-hamburger.addEventListener("click", () => {
-  mobileNav.classList.toggle("active")
-})

@@ -402,24 +402,28 @@ body {
     justify-content: space-between;
   }
 
+  .logo-container {
+    min-width: 80px;
+    left: 10px;
+  }
+
   .mobile-nav {
     position: fixed;
     top: 80px;
     right: 0;
     width: 220px;
     height: 300px;
-    background-color: #227286e0;
     display: flex;
     flex-direction: column;
     padding: 20px;
     z-index: 1000;
-
+    background: linear-gradient(245deg, rgba(86, 122, 195, 0.855), rgba(16, 164, 159, 0.864));
     transform: translateX(100%);
+    border: white 2px solid;
   }
 
   .mobile-nav.active {
     border-radius: 20px;
-    transform: translateX(0);
     gap: 10px;
   }
 
@@ -460,12 +464,20 @@ body {
     width: 0;
   }
 
+  .plus-icon {
+    width: 20px;
+    top: 4px;
+    right: 4px;
+  }
+
   .sidebar-closed {
     top: -20%;
+    height: 30px;
+    width: 30px;
   }
 
   .media-area {
-    height: 30vh;
+    height: 26vh;
   }
 
   .content-media {
@@ -473,13 +485,18 @@ body {
   }
 
   .content {
-    margin-top: 20vh;
+    margin-top: 17vh;
     padding-right: 5px;
   }
 
   .title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     white-space: nowrap;
+  }
+
+  .description {
+    margin-top: 7%;
+    font-size: 1.1rem;
   }
 
   .facts {
